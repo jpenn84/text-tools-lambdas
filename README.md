@@ -1,12 +1,15 @@
-# Mocking Text Project - Lambda
+# Text Tools Lambdas
 
-The Mocking Text Project is a simple serverless example project that uses serverless architecture and a web frontend for easily turning normal text into mmocking text.
+Text Tools Lambdas are lambda functions that perform the text alteration as defined by their individual functional areas.
+While it would make more sense to use a local JS function, an API-based approach allows integration into other products.
+Additioally, this is an academic exercise aimed at gaining more experience working with AWS Lambdas and serverless infrastructure in general.
 
-The Mocking Text Project is a web application which makes REST requests to change text, allowing a user to convert their text from any device with a web browser.
+## Explanation of tools
 
-## Explanation of Mocking Text
+### Sarcastic Text
 
-Mocking text comes from a meme of SpongeBob SquarePants scene, acting like a chicken due to hypnosis, where the still frame looks like SpongeBob is mocking someone.
+Sarcastic text comes from a meme of SpongeBob SquarePants scene, acting like a chicken due to hypnosis, where the still frame looks like SpongeBob is mocking someone.
+The text is transformed to alternate the letter case of each letter. Punctuation and numbers are ignored. The limitations on what characters' case can be changed is limited by the Unicode Standard, as described in section 3.13 "Default Case Folding." (https://www.unicode.org/versions/Unicode15.0.0/ch03.pdf#page=86)
 
 **Example**
 
@@ -14,13 +17,7 @@ Input: ` Money can't buy happiness.`
 
 Output: `MoNeY cAn'T bUy HaPpInEsS.`
 
-## Limitations
 
-The current limitations on what characters' case can be changed is limited by the Unicode Standard, as described in section 3.13 "Default Case Folding." (https://www.unicode.org/versions/Unicode15.0.0/ch03.pdf#page=86)
-
-## API vs Client-Side function
-
-While the same expected results can be made as a JS function and be made fully client-side, the use of an API allows for future expansion, such as training AI models or data collection.
 ## Authors
 
 - [@jpenn84](https://www.github.com/jpenn84)
